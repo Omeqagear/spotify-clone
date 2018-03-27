@@ -1,0 +1,34 @@
+.mat-tab-labels {
+    justify-content: center;
+  }
+  
+  .mat-tab-header {
+    border-bottom: 0;
+  }
+  
+  .mat-tab-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .round-ripple .mat-button-ripple {
+    border-radius: 20px;
+  }
+  
+  md-slider.thumb-on-hover {
+    .mat-slider-thumb {
+      visibility: hidden;
+    }
+  
+    &:hover .mat-slider-thumb {
+      visibility: visible;
+    }
+  }
+  
+  .mat-nav-list.very-dense[dense] .mat-list-item .mat-list-item-content {
+    padding: 0;
+  }
+  
+  .mat-nav-list.rectangle-avatar .mat-list-item .mat-list-avatar {
+    border-radius: 0;
+  }

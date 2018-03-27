@@ -1,0 +1,51 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.light,
+a:link,
+a:visited {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  opacity: .5;
+  text-decoration: none;
+  transition: opacity .15s ease-in-out;
+}
+
+a:hover,
+a:active {
+  opacity: 1;
+}
+
+.clearfix {
+  clear: both;
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.app-font {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+::selection {
+  background-color: #ff956a;
+  color: #fff;
+}
