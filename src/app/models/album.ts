@@ -1,17 +1,17 @@
 import { Copyright } from './copyright';
-import { PagingObject } from './paging-object';
-import { SimplifiedTrack } from './simplified-track';
 import { Image } from './image';
+import { PagingObject } from './paging-object';
+import { SimplifiedAlbum } from './simplified-album';
+import { SimplifiedArtist } from './simplified-artist';
+import { SimplifiedTrack } from './simplified-track';
 
-export class Album {
-    constructor(
-        public copyrigt: Copyright[],
-        public genre: string[],
-        public images: Image[],
-        public label: string,
-        public popularity: number,
-        public release_date: string,
-        public release_date_precision: string,
-        tracks: PagingObject<SimplifiedTrack>
-    ) {}
+export class Album extends SimplifiedAlbum {
+  copyrights: Copyright[];
+  genres: string[];
+  images: Image[];
+  label: string;
+  popularity: number;
+  release_date: string;
+  release_date_precision: string;
+  tracks: PagingObject<SimplifiedTrack>;
 }

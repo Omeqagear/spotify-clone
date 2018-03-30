@@ -1,8 +1,7 @@
 import { SimplifiedAlbum } from './simplified-album';
+import { SimplifiedTrack } from './simplified-track';
 
-export class Track {
-    constructor(
-        public album: SimplifiedAlbum,
-        public popularity?: number
-    ) {}
+export class Track extends SimplifiedTrack {
+  album: SimplifiedAlbum;
+  popularity?: number;
 }
