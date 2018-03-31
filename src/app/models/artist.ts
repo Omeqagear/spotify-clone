@@ -2,10 +2,11 @@ import { Followers } from './followers';
 import { Image } from './image';
 
 export class Artist {
-    constructor(
-        public followers: Followers,
-        public genres: string[],
-        public images: Image[],
-        public popularity: number
-    ) {}
+    id: string;
+    followers: Followers;
+    genres: string[];
+    images: Image[];
+    popularity: number;
+    name: string;
+    type: string;
 }

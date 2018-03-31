@@ -1,0 +1,50 @@
+<mat-list-item class="track" [class.playable]="track.preview_url">
+  <div mat-list-icon class="list-icon">
+    <mat-icon class="icon-text" *ngIf="isPlaying; else index">
+      volume_up
+    </mat-icon>
+
+    <ng-template #index>
+      <span class="light icon-text">{{idx}}.</span>
+    </ng-template>
+
+    <button
+      mat-icon-button
+      class="icon-button"
+      (click)="onPause()"
+      *ngIf="!paused && isPlaying; else playButton"
+    ><mat-icon class="icon-icon">pause</mat-icon></button>
+
+    <ng-template #playButton>
+      <button
+        mat-icon-button
+        class="icon-button"
+        (click)="onPlay()"
+        *ngIf="paused || !isPlaying"
+      ><mat-icon class="icon-icon">play_arrow</mat-icon></button>
+    </ng-template>
+
+  </div>
+
+  <h3
+    mat-line
+    [class.light]="!track.preview_url"
+    class="name"
+  >{{track.name}}</h3>
+
+  <h6 mat-line>
+    <a
+      *ngFor="let artist of track.artists"
+      [routerLink]="['/artist', artist.id]"
+      class="artist"
+    >{{artist.name}}</a>
+
+    <a
+      *ngIf="track.album"
+      [routerLink]="['/album', track.album.id]"
+      class="album"
+    >{{track.album.name}}</a>
+  </h6>
+
+  <span class="light time">{{track.duration_ms|msToString}}</span>
+</mat-list-item>

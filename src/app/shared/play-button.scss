@@ -1,0 +1,29 @@
+view,
+.pause,
+.play {
+  display: block;
+  color: #fff;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  opacity: .9;
+  margin: 5px 8px;
+  width: 117px;
+
+  &:not([disabled]):hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  &:not([disabled]):active {
+    opacity: 1;
+    transform: scale(.95);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.view {
+  border: 2px solid rgba(#fff, .7);
+}

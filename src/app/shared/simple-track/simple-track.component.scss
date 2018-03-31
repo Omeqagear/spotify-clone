@@ -1,0 +1,51 @@
+artist:after {
+    content: " \2027 ";
+  }
+  
+  .artist:last-child:after {
+    display: none;
+  }
+  
+  .icon-button {
+    display: none;
+    text-align: left;
+  }
+  
+  .icon-icon {
+    font-size: 40px;
+  }
+  
+  .track {
+    transition: background-color .15s ease-in-out;
+  }
+  
+  :host(:hover) {
+    .playable {
+      background-color: rgba(0, 0, 0, .3);
+  
+      .icon-text {
+        display: none;
+      }
+  
+      .icon-button {
+        display: inline-block;
+      }
+    }
+  }
+  
+  .list-icon[md-list-icon] {
+    width: 60px;
+    height: 40px;
+    text-align: right;
+  }
+  
+  $highlight-color: #b2ff59;
+  :host(.playing) {
+    .icon-text,
+    .name,
+    .icon-icon,
+    .time {
+      color: $highlight-color;
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,25 @@
+.artists {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .empty,
+  .artist {
+    flex: 1 1 200px;
+    max-width: 300px;
+    margin: 15px;
+  }
+  
+  .empty {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 769px) {
+    .empty,
+    .album {
+      max-width: 250px;
+    }
+  }

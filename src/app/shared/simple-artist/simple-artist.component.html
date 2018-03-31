@@ -1,0 +1,26 @@
+<div class="image-wrapper">
+  <img
+    class="image"
+    [src]="artist.images[0]?.url"
+    [alt]="artist.name"
+    (error)="artist.images = [{ url: placeholder }]"
+    (click)="view()"
+  >
+
+  <div class="overlay">
+    <button
+      *ngIf="isPlaying; else playButton"
+      mat-icon-button
+      class="pause"
+      (click)="pause()"
+    ><mat-icon>pause</mat-icon></button>
+
+    <ng-template #playButton>
+      <button mat-icon-button class="play" (click)="play()">
+        <mat-icon>play_arrow</mat-icon>
+      </button>
+    </ng-template>
+  </div>
+</div>
+
+<h3 class="name" (click)="view()">{{artist.name}}</h3>

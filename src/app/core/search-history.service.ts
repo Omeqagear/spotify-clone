@@ -11,6 +11,7 @@ import {
 import { Subject } from 'rxjs/Subject';
 import { SearchHistory } from '../models/search-history';
 import { StorageService } from './storage.service';
+import { Artist } from '../models/artist';
 
 
 @Injectable()
